@@ -1,17 +1,19 @@
 <template>
+<div class="login">
   <el-form
     ref="ruleFormRef"
     :model="ruleForm"
     status-icon
     :rules="rules"
     label-width="120px"
-    class="demo-ruleForm"
+    class="ruleForm"
   >
     <el-form-item label="Username" prop="username">
       <el-input
         v-model="ruleForm.username"
         type="text"
         autocomplete="off"
+        style="width: 300px;"
       ></el-input>
     </el-form-item>
     <el-form-item label="Password" prop="pass">
@@ -19,6 +21,8 @@
         v-model="ruleForm.pass"
         type="password"
         autocomplete="off"
+        width="300px"
+        style="width: 300px;"
       ></el-input>
     </el-form-item>
     <el-form-item>
@@ -28,6 +32,7 @@
       <el-button @click="resetForm(ruleFormRef)">Reset</el-button>
     </el-form-item>
   </el-form>
+</div>
 </template>
 
 <script lang="ts">
@@ -64,7 +69,7 @@ export default defineComponent({
     })
     const router = useRouter()
     const resetForm = () => {
-      console.log('')
+      ruleFormRef.value.resetFields()
     }
     const submitForm = (formEl: InstanceType<typeof ElForm> | undefined) => {
       if (!formEl) return
@@ -94,3 +99,22 @@ export default defineComponent({
   }
 })
 </script>
+<style lang="scss" scoped>
+.login {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/video-cover.jpeg) no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  position: relative;
+}
+.ruleForm {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  padding-top: 130px;
+  .el-form-item__label {
+    color: #fff;
+  }
+}
+</style>

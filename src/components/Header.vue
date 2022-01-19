@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <i v-if="hasBack" class="el-icon-back" @click="back">back---></i>
-    <span>{{name}}</span>
+  <div class="head-box">
+    <div class="left">
+      <i v-if="hasBack" class="el-icon-back" @click="back">back---></i>
+      <span>{{name}}</span>
+    </div>
     <div class="right">
       <el-popover
         placement="bottom"
@@ -69,7 +71,7 @@ export default defineComponent({
   }
 })
 </script>
-<style>
+<style lang="scss">
   .popper-user-box {
     background: url('https://s.yezgea02.com/lingling-h5/static/account-banner-bg.png') 50% 50% no-repeat!important;
     background-size: cover!important;
@@ -84,5 +86,18 @@ export default defineComponent({
     right: 0;
     top: 0;
     cursor: pointer;
+  }
+  .head-box {
+    height: 52px;
+    background: #333;
+    line-height: 52px;
+    padding: 0 20px;
+    color: #fff;
+    .left {
+      float: left;
+    }
+    .right {
+      float: right;
+    }
   }
 </style>
