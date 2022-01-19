@@ -30,7 +30,7 @@
           <el-menu-item-group>
             <el-menu-item index="/introduce">系统介绍</el-menu-item>
             <el-menu-item index="/dashbord">Dashbord</el-menu-item>
-            <el-menu-item index="/addproduct">添加商品</el-menu-item>
+            <el-menu-item index="/add">添加商品</el-menu-item>
           </el-menu-item-group>
         </el-sub-menu>
         <el-sub-menu index="2">
@@ -53,7 +53,7 @@
             <el-menu-item index="/category">分类管理</el-menu-item>
             <el-menu-item index="/good">商品管理</el-menu-item>
             <el-menu-item index="3-3">会员管理</el-menu-item>
-            <el-menu-item index="3-3">订单管理</el-menu-item>
+            <el-menu-item index="/order">订单管理</el-menu-item>
           </el-menu-item-group>
         </el-sub-menu>
         <el-sub-menu index="4">

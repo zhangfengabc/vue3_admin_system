@@ -7,6 +7,8 @@ import Addproduct from '../components/dashbord/Addproduct.vue'
 import Category from '../components/module/Category.vue'
 import Good from '../components/module/Good.vue'
 import Add from '../components/module/Add.vue'
+import Order from '../components/module/Order.vue'
+import OrderDetail from '../components/module/Order_detail.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -67,6 +69,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/add',
     name: 'add',
     component: Add
+  },
+  {
+    path: '/order',
+    name: 'Order',
+    component: Order
+  },
+  {
+    path: '/order_detail',
+    name: 'order_detail',
+    component: OrderDetail
   }
 ]
 

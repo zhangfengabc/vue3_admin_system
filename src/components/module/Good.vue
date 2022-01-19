@@ -37,7 +37,7 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-pagination background layout="prev, pager, next" 
+    <el-pagination background layout="prev, pager, next"
       :total="totalCount"
       :current-page="currentPage"
       :page-size="pageSize"
@@ -53,8 +53,7 @@
   </el-card>
 </template>
 <script lang="ts">
-import { defineComponent, onMounted, toRefs } from 'vue'
-import { ref, reactive } from 'vue'
+import { defineComponent, onMounted, ref, toRefs, reactive } from 'vue'
 import type { ElTable } from 'element-plus'
 import axios from '@/utils/axios'
 import { ElMessage } from 'element-plus'
@@ -106,7 +105,7 @@ export default defineComponent({
       getGoodsList()
     })
     const changePage = (num) => {
-      state.currentPage  = num
+      state.currentPage = num
       getGoodsList()
     }
     const handleStatus = (id, status) => {
